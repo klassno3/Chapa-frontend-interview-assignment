@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chapa-frontend-interview-assignment
 
-## Getting Started
+##  Role-Based Dashboard Application
 
-First, run the development server:
+👤 **Built by:** Betelhem Kirub
+
+## 🔗 Live Demo
+👉 [View Live Demo] (https://chapa-frontend-interview-assignment-nine.vercel.app/).
+
+
+<img width="1506" height="927" alt="image" src="https://github.com/user-attachments/assets/fbd6550c-8d5c-4d99-bfff-ab0fbf06486f" />
+<img width="1522" height="933" alt="image" src="https://github.com/user-attachments/assets/9466f577-4ffb-4bf6-8208-3d735aa0b40f" />
+
+
+
+## 👥 Test Users (For Evaluation)
+
+| Role          | Email               | Password    |
+|---------------|---------------------|-------------|
+| User          | `user@gmail.com`    | `user1234`  |
+| Admin         | `admin@gmail.com`   | `admin1234` |
+| Super Admin   | `super@gmail.com`   | `super1234` |
+
+ These users are hardcoded and can be used to test login, redirection, and access restrictions.
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
+- **Forms:** React Hook Form
+- **Validation:** Zod
+- **Charts:** Chart.js
+- **Icons:** React Icons
+
+## 🧰 Tools & Libraries Used
+
+- ✅ **Next.js App Router** – for file-based routing and layouts
+- ✅ **Server Actions** – for handling login and secure cookie logic
+- ✅ **Middleware** – for access control based on user role
+- ✅ **Context API + localStorage** – for client-side role management
+- ✅ **Custom Error Pages** – for 403 (unauthorized) and 404 (not found)
+- ✅ **Zod + React Hook Form** – for typed, validated form handling
+- ✅ **Chart.js** – for simple admin/super-admin dashboard visuals
+
+
+## ✨ Features
+
+- 🔐 **Mock Authentication**
+  - Uses a fake user list with 3 role types
+  - Validates credentials server-side
+  - Stores role in an `HttpOnly` cookie
+
+- 🔁 **Role-Based Redirection**
+  - After login, users go to their role-specific route: `/user`, `/admin`, or `/super`
+  - Already-logged-in users who go to `/login` are redirected
+
+- 🚦 **Route Protection via Middleware**
+  - Checks the `role` cookie on all protected routes
+  - Redirects unauthenticated users to `/login`
+  - Redirects users trying to access another role’s route to `/403`
+
+- ✅ **Logout**
+  - Removes role from both localStorage and cookies
+  - Redirects safely to `/login`
+
+- 📊 **Per-Role Dashboards**
+  - `/user`: add and view transaction and view wallet summary
+  - `/admin`: view & manage users
+  - `/super`: manage admins and summary
+
+## 🛠️ How to Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+````
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then open: [http://localhost:3000](http://localhost:3000)
