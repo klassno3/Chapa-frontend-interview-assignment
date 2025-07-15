@@ -79,7 +79,7 @@ export default function AdminOverview() {
         </div>
       </div>
 
-      <div>
+      <div className="flex gap-3">
         <input
           type="text"
           placeholder="Search by name or email"
