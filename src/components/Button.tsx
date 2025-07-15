@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       type={ type }
       onClick={ onClick }
-      className={ `w-full rounded cursor-pointer transition-colors duration-300  font-sans capitalize flex items-center justify-center gap-2  disabled:opacity-60  disabled:cursor-not-allowed
+      className={ `w-full rounded cursor-pointer transition-colors duration-300  font-sans capitalize flex items-center justify-center gap-2  text-sm md:text-base disabled:opacity-60  disabled:cursor-not-allowed
         ${sizeClasses[size]}
         ${variantClasses[variant]}` }
       disabled={ loading }

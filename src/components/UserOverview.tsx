@@ -44,9 +44,9 @@ export default function UserOverview() {
   return (
     <div className="overflow-x-auto flex flex-col gap-3 font-sans rounded-xl bg-white p-6">
       <div className="w-full flex mb-4 gap-3 flex-col md:flex-row justify-between items-start md:items-center ">
-        <h2 className="text-xl text-secondary/90 font-medium ">User Overview</h2>
+        <h2 className="text-lg md:text-xl text-secondary/90 font-medium ">User Overview</h2>
 
-        <div>
+        <div className="flex gap-3">
           <input
             type="text"
             placeholder="Search by name or email"
@@ -169,6 +169,6 @@ export default function UserOverview() {
           ) }
         </tbody>
       </table>
-    </div>
+    </div >
   );
 }

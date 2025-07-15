@@ -48,7 +48,7 @@ export default function AdminOverview() {
 
   // Toggle status between Active and Inactive/Pending
   const toggleStatus = (id: string) => {
-    setLoadingMap((prev) => ({ ...prev, [id]: true }));
+    setActivateMap((prev) => ({ ...prev, [id]: true }));
     setTimeout(() => {
       setData((prev) =>
         prev.map((admin) => {

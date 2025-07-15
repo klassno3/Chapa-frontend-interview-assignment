@@ -126,7 +126,7 @@ export default function TransactionTable() {
     <div className="overflow-x-auto flex flex-col gap-3 font-sans rounded-xl bg-white p-6">
       <div className="w-full flex mb-4 gap-3 flex-col md:flex-row justify-between items-start md:items-center ">
 
-        <h2 className="text-xl text-secondary/90 font-medium ">Recent Transactions</h2>
+        <h2 className="text-base md:text-xl text-secondary/90 font-medium ">Recent Transactions</h2>
 
         <div className="">
           <Button onClick={ () => setShowModal(true) } title="Add New Transaction" loading={ false } />

@@ -77,7 +77,7 @@ export default function AddAdminModal({ onAdd, onClose }: Props) {
       <form
         onSubmit={ handleSubmit(onSubmit) }
         ref={ modalRef }
-        className="bg-white p-6 rounded-xl w-10/12 md:w-1/2 2xl:w-1/3 space-y-4"
+        className="bg-white p-4 md:p-6 rounded-xl w-10/12 md:w-1/2 2xl:w-1/3 space-y-4"
       >
         <h2 className="text-lg text-center text-secondary/80 font-medium">Add Admin</h2>
         <div>

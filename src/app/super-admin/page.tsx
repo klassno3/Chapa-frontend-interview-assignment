@@ -117,7 +117,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col items-start gap-7 bg-white rounded-2xl  p-6 ">
+          <div className="w-full md:w-1/2 flex flex-col items-start gap-7 bg-white rounded-2xl  p-4 md:p-6 ">
             <div className="flex items-center gap-3">
               <Image src={ Pie } alt="Pie Icon" width={ 500 } height={ 500 } className="flex justify-center items-center w-5 md:w-7   object-cover" />
 
@@ -133,7 +133,7 @@ const Page = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-7">
 
-          <div className="w-full md:w-[40%] flex flex-col items-start gap-7 bg-white rounded-2xl  p-6 ">
+          <div className="w-full md:w-[40%] flex flex-col items-start gap-7 bg-white rounded-2xl  p-4 md:p-6 ">
             <div className="flex items-center gap-3">
               <Image src={ Bar } alt="Bar Icon" width={ 500 } height={ 500 } className="flex justify-center items-center w-5 md:w-7   object-cover" />
 

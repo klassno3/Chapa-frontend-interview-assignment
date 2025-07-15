@@ -78,9 +78,9 @@ const Page = () => {
               <Image src={ Chip } alt="Bank Logo" width={ 500 } height={ 500 } className="flex justify-center items-center w-12 md:w-18   object-cover mt-4" />
 
               <div className="w-full flex justify-between items-center">
-                <p className="text-white text-lg font-thin font-mono">+251*******28</p>
+                <p className="text-white text-sm md:text-lg font-thin font-mono">+251*******28</p>
                 <div className="flex flex-col item-start">
-                  <p className="font-mono font-light text-white/80 text-sm">Total Balance</p>
+                  <p className="font-mono font-light text-white/80 text-xs md:text-sm">Total Balance</p>
                   <div className="flex items-center gap-5">
 
                     <button
@@ -89,7 +89,7 @@ const Page = () => {
                     >
                       { showBalance ? <FaEyeSlash size={ 18 } /> : <FaEye size={ 18 } /> }
                     </button>
-                    <p className="font-mono text-xl">
+                    <p className="font-mono text-base md:text-xl">
                       { showBalance ? balance.toLocaleString() : "*".repeat(balance.toLocaleString().length) }
                     </p>
                   </div>
@@ -104,7 +104,7 @@ const Page = () => {
             </div>
 
           </div>
-          <div className="w-full md:w-1/2 flex flex-col items-start gap-7 bg-white rounded-2xl  p-6 ">
+          <div className="w-full md:w-1/2 flex flex-col items-start gap-7 bg-white rounded-2xl   p-4 md:p-6 ">
             <div className="flex items-center gap-3">
               <Image src={ Pie } alt="Pie Icon" width={ 500 } height={ 500 } className="flex justify-center items-center w-5 md:w-7   object-cover" />
 
