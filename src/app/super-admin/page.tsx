@@ -86,12 +86,12 @@ const Page = () => {
             <div className="bg-white flex items-center justify-center w-16 h-16 rounded-xl">
               <Image src={ Logo } alt="Logo" width={ 500 } height={ 500 } className="flex justify-center items-center w-7 md:w-10  object-cover" />
             </div>
-            <div className="flex flex-col sm:flex-row w-full gap-4 mt-5">
+            <div className="flex flex-col sm:flex-row w-full gap-3 mt-5">
               <div className="bg-white/20 p-3 rounded-lg w-full flex flex-col items-start ">
                 <p className="font-light text-white/90">Total User</p>
                 <p className="font-mono font-semibold text-xl">{ totalUsers }</p>
 
-                <div className="flex text-sm items-center gap-1">
+                <div className="flex text-xs items-center gap-1">
                   <span className="text-green-600">3%</span>
                   <p className="text-white/80">increase this month</p>
                 </div>
@@ -100,7 +100,7 @@ const Page = () => {
                 <p className="font-light text-white/90">Total Transaction</p>
                 <p className="font-mono font-semibold text-xl">{ totalTransactions }</p>
 
-                <div className="flex text-sm items-center gap-1">
+                <div className="flex text-xs items-center gap-1">
                   <span className="text-green-600">12%</span>
                   <p className="text-white/80">increase this month</p>
                 </div>
@@ -109,7 +109,7 @@ const Page = () => {
                 <p className="font-light text-white/90">Total Amount</p>
                 <p className="font-mono font-semibold text-xl">{ totalPayments }</p>
 
-                <div className="flex text-sm items-center gap-1">
+                <div className="flex text-xs items-center gap-1">
                   <span className="text-red-600">6%</span>
                   <p className="text-white/80">decrease this month</p>
                 </div>
