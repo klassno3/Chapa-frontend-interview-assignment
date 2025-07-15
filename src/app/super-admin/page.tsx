@@ -19,6 +19,14 @@ import AdminOverview from '@/components/AdminOverview'
 ChartJS.register(ArcElement, Tooltip, Legend)
 const Page = () => {
   const totalUsers = users.length;
+  const totalPayments = users.reduce((sum, user) => {
+    return sum + user.payments.reduce((a, b) => a + b, 0);
+  }, 0);
+  const totalTransactions = users.reduce(
+    (count, user) => count + user.payments.length,
+    0
+  );
+
   const activeUsers = users.filter(user => user.isActive).length;
   const activeUserPercentage = ((activeUsers / totalUsers) * 100).toFixed(2);
   interface CategoryData {
@@ -81,7 +89,7 @@ const Page = () => {
             <div className="flex flex-col sm:flex-row w-full gap-4 mt-5">
               <div className="bg-white/20 p-3 rounded-lg w-full flex flex-col items-start ">
                 <p className="font-light text-white/90">Total User</p>
-                <p className="font-mono font-semibold text-xl">2,500</p>
+                <p className="font-mono font-semibold text-xl">{ totalUsers }</p>
 
                 <div className="flex text-sm items-center gap-1">
                   <span className="text-green-600">3%</span>
@@ -89,8 +97,8 @@ const Page = () => {
                 </div>
               </div>
               <div className="bg-white/20 p-3 rounded-lg w-full flex flex-col items-start">
-                <p className="font-light text-white/90">Total User</p>
-                <p className="font-mono font-semibold text-xl">2,500</p>
+                <p className="font-light text-white/90">Total Transaction</p>
+                <p className="font-mono font-semibold text-xl">{ totalTransactions }</p>
 
                 <div className="flex text-sm items-center gap-1">
                   <span className="text-green-600">12%</span>
@@ -98,8 +106,8 @@ const Page = () => {
                 </div>
               </div>
               <div className="bg-white/20 p-3 rounded-lg w-full flex flex-col items-start">
-                <p className="font-light text-white/90">Total User</p>
-                <p className="font-mono font-semibold text-xl">2,500</p>
+                <p className="font-light text-white/90">Total Amount</p>
+                <p className="font-mono font-semibold text-xl">{ totalPayments }</p>
 
                 <div className="flex text-sm items-center gap-1">
                   <span className="text-red-600">6%</span>
